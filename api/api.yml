@@ -1,0 +1,25 @@
+openapi: '3.0.2'
+info:
+  title: News Comparer
+  version: '1.0'
+servers:
+  - url: https://localhost:8080/rest
+
+paths:
+  /newssite:
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: 
+                $ref: "#/components/schemas/NewsSiteGet"
+
+components:
+  schemas:
+    NewsSiteGet:
+      type: object
+      properties:
+        name:
+          type: string
