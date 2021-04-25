@@ -9,7 +9,7 @@ export class NewsSitesRoutes extends AbstractRoutes {
     }
 
     configureRoutes(router: express.Router): void {
-        // router.get('/', (req, res) => res.send(newsSitesService.getSite()));
         router.get('/', (req, res) => res.status(200).send(newsSitesService.getSite()));
+        router.get('/similarity', (req, res) => res.status(200).send(newsSitesService.getSimilarity()));
     }
 }
